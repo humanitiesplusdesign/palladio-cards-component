@@ -1,0 +1,25 @@
+{
+  "name": "palladio-cards-component",
+  "description": "Cards component for Palladio",
+  "main": [
+    "dist/palladio-cards-component.min.js",
+    "dist/palladio-cards-component.css"
+  ],
+  "authors": [
+    "Ethan Jewett <ethan.jewett@coredatra.com>"
+  ],
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "palladio",
+    "visualization"
+  ],
+  "moduleType": [],
+  "homepage": "http://hdlab.stanford.edu/palladio/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
