@@ -11,15 +11,6 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
 			compileString += 'show-settings="showSettings" ';
 			compileString += 'cards-height="cardsHeight" ';
       
-      console.log(newScope.cardsHeight);
-      console.log(newScope.showSettings);
-      console.log(newScope.titleDim);
-      console.log(newScope.subtitleDim);
-      console.log(newScope.textDim);
-      console.log(newScope.linkDim);
-      console.log(newScope.imgUrlDim);
-      console.log(newScope.sortDim);
-      
       if(newScope.titleDim) {
         compileString += 'config-title-dimension="titleDim" ';
       }
@@ -45,8 +36,6 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
       }
 
 			compileString += '></div>';
-      
-      console.log(compileString);
 
 			return compileString;
 		};
@@ -87,8 +76,6 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
 					}
 
 					element.height(scope.calcHeight);
-          console.log(scope.calcHeight);
-					//$(element[0].nextElementSibling).height(scope.calcHeight);
 				}
 
 				$(document).ready(refresh);
