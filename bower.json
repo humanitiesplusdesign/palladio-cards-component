@@ -2,7 +2,7 @@
   "name": "palladio-cards-component",
   "description": "Cards component for Palladio",
   "main": [
-    "dist/palladio-cards-component.min.js",
+    "dist/palladio-cards-component.js",
     "dist/palladio-cards-component.css"
   ],
   "authors": [
@@ -13,6 +13,9 @@
     "palladio",
     "visualization"
   ],
+  "dependencies": {
+    "palladio": ">=1.2.0-beta.10"
+  },
   "moduleType": [],
   "homepage": "http://hdlab.stanford.edu/palladio/",
   "ignore": [
