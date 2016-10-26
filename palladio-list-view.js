@@ -276,7 +276,7 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
 					// There can be only one unique key, so no selection for this one.
 					if(scope.metadata.filter(function (d) { return d.countBy === true; })[0]) {
 						scope.listDim = scope.metadata.filter(function (d) { return d.countBy === true; })[0];
-						scope.titleDim = scope.listDim;
+						if(!scope.titleDim) scope.titleDim = scope.listDim;
 					}
 
 					scope.id = scope.xfilter.dimension(function (d) { return "" + d[scope.listDim.key]; });
