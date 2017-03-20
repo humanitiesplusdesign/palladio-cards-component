@@ -6,10 +6,12 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
 
 			newScope.showSettings = newScope.showSettings === undefined ? false : newScope.showSettings;
 			newScope.cardsHeight = newScope.height === undefined ? undefined : newScope.height;
+			newScope.functions = {};
 
 			var compileString = '<div class="with-settings" data-palladio-list-view-with-settings ';
 			compileString += 'show-settings="showSettings" ';
 			compileString += 'cards-height="cardsHeight" ';
+			compileString += 'functions=functions ';
       
       if(newScope.titleDim) {
         compileString += 'config-title-dimension="titleDim" ';
@@ -243,7 +245,8 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
         configTextDimension: '=',
         configLinkDimension: '=',
         configImgUrlDimension: '=',
-        configSortDimension: '='
+        configSortDimension: '=',
+				functions: '='
 			},
 			templateUrl: 'partials/palladio-cards-component/template.html',
 			link: {
@@ -402,6 +405,12 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
 						// Placeholder
 						return state;
 					};
+
+					if(scope.functions) {
+						scope.functions['getSettings'] = function() {
+							return element.find('.cards-settings')[0]
+						}
+					}
 
 					function importState(state) {
 						scope.$apply(function (s) {
