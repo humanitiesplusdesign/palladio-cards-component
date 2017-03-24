@@ -410,6 +410,13 @@ angular.module('palladioCardsComponent', ['palladio', 'palladio.services'])
 						scope.functions['getSettings'] = function() {
 							return element.find('.cards-settings')[0]
 						}
+						scope.functions['importState'] = function(state) {
+							importState(state)
+							return true
+						}
+						scope.functions['exportState'] = function() {
+							return exportState()
+						}
 					}
 
 					function importState(state) {
