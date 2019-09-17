@@ -1,4 +1,14 @@
 {
+  "name": "palladio-cards-component",
+  "main": "dist/palladio-cards-component.js",
+  "version": "1.1.0",
+  "description": "Cards component for the Palladio framework.",
+  "homepage": "http://hdlab.stanford.edu/palladio",
+  "repository": "https://github.com/humanitiesplusdesign/palladio-cards-component",
+  "scripts": {
+    "build": "gulp scripts css",
+    "develop": "gulp"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-angular-templates": "0.0.2",
